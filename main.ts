@@ -11,7 +11,7 @@ if (tagline.includes("\n") || tagline.includes("\r")) {
   throw new Error("Tagline must be a single line.");
 }
 
-mkdirSync("output", { recursive: true });
-writeFileSync("output/entry.txt", tagline + "\n", "utf8");
+mkdirSync("/output", { recursive: true });
+writeFileSync("/output/entry.txt", tagline + "\n", "utf8");
 
 console.log(`Tagline (${tagline.length} chars): ${tagline}`);
